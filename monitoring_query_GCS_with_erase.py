@@ -44,7 +44,7 @@ def upload_to_gcs(bucket_name, source_file_name, destination_blob_name):
 
 def query_to_csv_and_upload(bucket_name, local_directory):
     # Database connection
-    connection = pymysql.connect(host='127.0.0.1', user='root', password='hiroodaikai01', db='drums')
+    connection = pymysql.connect(host='127.0.0.1', user='root', password='password', db='drums')
 
     # SQL query to fetch records from the last 480 minutes
     sql_query = "SELECT * FROM monitoring WHERE TimeStamp >= NOW() - INTERVAL 480 MINUTE;"
